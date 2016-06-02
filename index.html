@@ -7,16 +7,264 @@
 
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="MDB/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="MDB/css/mdb.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="dist/styles/main.css">
   </head>
   <body>
 
-  <div class="app"></div>
-  
+  <div class="container-fluid p-l-0 p-r-0">
+    <section class="primary-container">
+      <div class="header col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 p-t-3 p-b-2">
+        <div class="header-branding col-md-6 col-xs-10">
+          <h2 class="header-branding-title">Matthew Chastain</h2>
+          <h5 class="header-branding-subtext">Web developer</h5>
+        </div>
+        <div class="header-nav pull-md-right col-md-6 hidden-md-down text-md-right">
+          <ul class="header-nav-links">
+            <a href="#" class="header-nav-links-link p-a-1" id="work">
+              <li id="work">Work</li>
+              <div class="expanding-underline"></div>
+            </a>
+            <a href="#" class="header-nav-links-link p-a-1" id="skills">
+              <li id="skills">Skills</li>
+              <div class="expanding-underline"></div>
+            </a>
+            <a href="#" class="header-nav-links-link p-a-1" id="about">
+              <li id="about">About</li>
+              <div class="expanding-underline"></div>
+            </a>
+            <a href="#" class="header-nav-links-link p-a-1" id="contact">
+              <li id="contact">Contact</li>
+              <div class="expanding-underline"></div>
+            </a>
+          </ul>
+        </div>
+        <div class="header-nav pull-xs-right col-md-6 col-sm-2 hidden-lg-up text-xs-right">
+          <i class="fa fa-bars fa-2x"></i>
+          <ul class="header-nav-links-mobile z-depth-3">
+            <a href="#" class="header-nav-links-link mobile" id="work">
+              <li id="work">Work</li>
+            </a>
+            <div class="hr"></div>
+            <a href="#" class="header-nav-links-link mobile" id="skills">
+              <li id="skills">Skills</li>
+            </a>
+            <div class="hr"></div>
+            <a href="#" class="header-nav-links-link mobile" id="about">
+              <li id="about">About</li>
+            </a>
+            <div class="hr"></div>
+            <a href="#" class="header-nav-links-link mobile" id="contact">
+              <li id="contact">Contact</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="primary-content col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0 p-t-3 p-b-3">
+        <div class="primary-content-statement col-lg-offset-6 col-lg-6 col-xs-12 text-xs-center text-lg-right">
+          <h4 class="primary-content-statement-me p-t-2 p-b-2">
+            I'm a developer who is passionate about providing solutions to the challenges you and I face daily while also ensuring the user's experience is intuitive and engaging.
+          </h4>
+          <div class="hr m-t-2 m-b-2"></div>
+          <h6 class="primary-content-statement-company p-t-2 p-b-2">
+            Co-Founded Software Juice, LLC with Dan Shapiro.
+          </h6>
+        </div>
+      </div>
+    </section>
+    <section class="secondary-container p-t-3 p-b-3">
+      <div class="project-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-1">
+        <h6 class="project-banner-subtext">A fully customized eCommerce solution for digital content</h6>
+        <h6 class="project-banner-subtext">(this is a Software Juice project currently in development)</h6>
+        <h2 class="project-banner-title p-t-1 p-b-1">Komposium's music library</h2>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#komposiumModal">More info</button>
+        <a href="http://www.komposium.com" class="btn btn-primary">View site</a>
+      </div>
+      <div class="modal fade" id="komposiumModal" tabindex="-1" role="dialog" aria-labelledby="komposiumLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                  <!--Header-->
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">Komposium project</h4>
+                  </div>
+                  <!--Body-->
+                  <div class="modal-body">
+                      <p>Komposium approached us, Software Juice, with a need to get their dream of a music library up and running. The following technologies are utilized in the building of the client-side portion of the application:</p>
+                      <ul>
+                        <li>- Backbone/Marionette</li>
+                        <li>- Dust</li>
+                        <li>- ES6</li>
+                        <li>- SCSS</li>
+                        <li>- Materialize</li>
+                        <li>- HTML5</li>
+                        <li>- Underscore</li>
+                        <li>- Gulp</li>
+                      </ul>
+                      <p>The backend of the application will, for security purposes, be left undisclosed.</p>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+              <!--/.Content-->
+          </div>
+      </div>
+      <div class="project-images col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-1 p-b-3">
+        <img src="img/komposium2.png" alt="" class="project-images-image mobile z-depth-2 m-r-1">
+        <img src="img/komposium1.png" alt="" class="project-images-image desktop z-depth-2">
+      </div>
+    </section>
+    <section class="tertiary-container p-t-3 p-b-3">
+      <div class="project-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-1">
+        <h6 class="project-banner-subtext">An experiment in unique design and implementation</h6>
+        <h2 class="project-banner-title p-t-1 p-b-1">Iron Yard Final Project</h2>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#finalProjectModal">More info</button>
+        <a href="http://mchaperc.github.io/final-project" class="btn btn-primary">View site</a>
+      </div>
+      <div class="modal fade" id="finalProjectModal" tabindex="-1" role="dialog" aria-labelledby="finalProjectLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                  <!--Header-->
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">The Iron Yard final project</h4>
+                  </div>
+                  <!--Body-->
+                  <div class="modal-body">
+                      <p>This project was the culmination of my time and the skills I learned while at The Iron Yard. We are each given 3 weeks to design and implement a project of our choice. I chose to build a real estate application (despite serious difficulties obtaining MLS data - I was able to get a beta sampling of data from Houston to suffice for the proof of concept this represents). Unlike other real estate applications, my goal was to expand the amount of information offered to a user. It's common practice to list the local school information, but I wanted to go a step farther with FBI crime data. Unfortunately, several of the APIs utilized in this project are now down, but the general idea is still in tact.</p>
+                      <p>The following technologies were utilized in the building of this project:</p>
+                      <ul>
+                        <li>- Backbone</li>
+                        <li>- Node/Express/Axios (utilized as a proxy server to compile API resources and package them neatly before returning to client)</li>
+                        <li>- Underscore</li>
+                        <li>- Handlebars</li>
+                        <li>- Google Maps</li>
+                        <li>- SCSS/Bourbon/Neat</li>
+                        <li>- jQuery</li>
+                        <li>- Gulp</li>
+                        <li>- Parse</li>
+                        <li>- Highcharts</li>
+                      </ul>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+              <!--/.Content-->
+          </div>
+      </div>
+      <div class="project-images col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-1 p-b-3">
+        <img src="img/final-project2.png" alt="" class="project-images-image mobile z-depth-2 m-r-1">
+        <img src="img/final-project1.png" alt="" class="project-images-image desktop z-depth-2">
+      </div>
+    </section>
+    <section class="quaternary-container p-t-3 p-b-3">
+      <div class="project-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-1">
+        <h6 class="project-banner-subtext">A Computer Science fundamentals experiment</h6>
+        <h2 class="project-banner-title p-t-1 p-b-1">Exploring Algorithms and Data Structures</h2>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#csFundamentalsModal">More info</button>
+        <a href="https://jsfiddle.net/user/mchaperc/fiddles/" class="btn btn-primary">View site</a>
+      </div>
+      <div class="project-images col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-1 p-b-3">
+        <!-- <img src="img/final-project2.png" alt="" class="project-images-image mobile z-depth-2 m-r-1">
+        <img src="img/final-project1.png" alt="" class="project-images-image desktop z-depth-2"> -->
+      </div>
+      <div class="modal fade" id="csFundamentalsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                  <!--Header-->
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">Computer Science fundamentals</h4>
+                  </div>
+                  <!--Body-->
+                  <div class="modal-body">
+                      <p>I have, for most of life, been an insatiable learner. Since deciding to switch careers from music to software, I have been on a quest to absorb all that I possibly can in order to make myself more effective, valuable, and able to help others. This contains an ongoing list of exercises I will continue to pursue in an effort to close any skill gap one without a traditional CS background might have. What might you expect to find?</p>
+                      <ul>
+                        <li>- Implementations of popular algorithms utilizing React and vanilla JavaScript</li>
+                        <li>- Solutions to complex/interesting problems</li>
+                        <li>- A catalogue of programming ideas for future reference</li>
+                      </ul>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+              <!--/.Content-->
+          </div>
+      </div>
+    </section>
+    <section class="quinary-container p-t-3 p-b-3">
+      <div class="informational-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-1">
+        <h2 class="informational-banner-title p-t-1 p-b-1">Skills</h2>
+      </div>
+      <div class="informational-content"></div>
+    </section>
+    <section class="senary-container p-t-3 p-b-3">
+      <div class="informational-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-1">
+        <h2 class="informational-banner-title p-t-1 p-b-1">About me <a class="resume p-l-1" href="Matthew_D_Chastain_Resume.pdf" download="Matthew_D_Chastain_Resume.pdfesume.pdf"><i class="fa fa-file-pdf-o"></i></a></h2>
+        <div class="hr m-t-2"></div>
+      </div>
+      <div class="informational-content col-lg-5 col-lg-offset-1 col-xs-12 text-xs-center text-lg-left p-t-2 p-b-3">
+        <p>Originally a classically trained musician, I began seeking an alternative path through which I could channel my passion for creativity. I spent 11 years teaching and writing music for high school, collegiate, and independent ensembles, all of which taught me many lessons about the creative process, organization, and leadership.</p>
+        <p>A little more than 2 years ago, I made the decision to pursue a passion I'd forgotten about since high school when I made toy games with friends in my abundant spare time: coding. I spent a year in self study before enrolling in The Iron Yard, where I graduated in July, 2015. A week after graduation, I began my new career, professionally, as a UI Engineer with BenefitFocus in Greenville, SC.</p>
+        <p>In November of 2015, a colleague - Dan Shapiro - and I founded Software Juice, LLC. We have our first customer's launch approaching in July, so stay tuned for that and many more projects to come. You can check out the placeholder here: <a class="komposium-link" href="http://komposium.com">Komposium</a></p>
+      </div>
+      <div class="information-content-image col-lg-5 col-xs-12 text-xs-center text-lg-right p-b-2 p-t-2">
+        <img src="img/me.png" alt="Matthew Chastain" class="z-depth-1">
+      </div>
+    </section>
+    <section class="septenary-container p-t-3 p-b-3">
+      <div class="informational-banner col-xs-12 col-lg-8 col-lg-offset-2 text-xs-center p-t-3 p-b-3">
+        <h2 class="informational-banner-title p-t-1 p-b-1">Contact</h2>
+        <a href="mailto:matthewdchastain@gmail.com" class="contact-links m-r-1"><i class="fa fa-envelope-o fa-2x"></i> Email</a>
+        <a href="http://github.com/mchaperc" class="contact-links m-r-1"><i class="fa fa-github fa-2x"></i> Github</a>
+        <a href="https://www.linkedin.com/in/matthew-chastain-543b82b3
+" class="contact-links"><i class="fa fa-linkedin fa-2x"></i> LinkedIn</a>
+      </div>
+      <div class="informational-content"></div>
+    </section>
+  </div>
+
   <!-- Scripts -->
-  <script data-main="scripts/config" src="scripts/require.js"></script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="MDB/js/jquery-2.2.3.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="MDB/js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="MDB/js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="MDB/js/mdb.min.js"></script>
+
+  <script src="dist/scripts/main.js"></script>
 
 </body>
 </html>

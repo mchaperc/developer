@@ -1,0 +1,245 @@
+//Color palette
+$primary-color: #4ABDAC;
+$secondary-color: #FC4A1A;
+$tertiary-color: #F7B733;
+$quaternary-color: #DFDCE3;
+$white: rgb(245,245,245);
+$very-white: rgb(255,255,255);
+$black: rgb(50,50,50);
+$gray: rgb(150,150,150);
+$dark-gray: rgb(100,100,100);
+
+.fa {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-primary {
+	background-color: $dark-gray;
+	border-color: $dark-gray;
+	color: $white;
+	transition: all .2s ease;
+	&:hover {
+		background-color: $black !important;
+		border-color: $black;
+		color: $white;
+	}
+}
+
+.btn-secondary {
+	background-color: $white;
+	border-color: $white;
+	color: $dark-gray;
+	transition: all .2s ease;
+	&:hover, &:active, &:focus {
+		background-color: $very-white !important;
+		color: $black;
+		&:active {
+			background-color: $very-white !important;
+			color: $black;
+		}
+	}
+}
+
+.project-images {
+	.project-images-image {
+		&.mobile {
+			max-width: 157px;
+		}
+		&.desktop {
+			max-width: 500px;
+		}
+	}	
+}
+
+h6 {
+	font-family: 'Slabo 27px', serif;
+	letter-spacing: 1px;
+}
+
+.resume {
+	color: $white;
+	&:hover {
+		color: $black;
+	}
+}
+
+.komposium-link {
+	color: $black;
+	&:hover {
+		color: $very-white;
+	}
+}
+
+.modal-content {
+	color: $black;
+}
+
+.primary-container {
+	background-color: $white;
+	color: $black;
+	overflow: hidden;
+	.header {
+		.header-branding-subtext {
+			color: $primary-color;
+		}
+		.header-nav {
+			.header-nav-links {
+				clear: both;
+				.header-nav-links-link {
+					color: $black;
+					display: inline-block;
+					transition: all .2s ease;
+					.expanding-underline {
+						background-color: $primary-color;
+						height: 3px;
+						margin: auto;
+						transition: all .2s ease;
+						width: 0;
+					}
+					&:hover {
+						color: $black;
+						.expanding-underline {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.primary-content {
+		.hr {
+			background-color: $primary-color;
+			margin-left: 20%;
+			height: 3px;
+			width: 80%;
+		}
+	}
+}
+
+.secondary-container, 
+.tertiary-container, 
+.quaternary-container, 
+.quinary-container, 
+.senary-container,
+.septenary-container {
+	margin-top: -8px;
+	overflow: hidden;
+}
+
+.secondary-container {
+	background-color: $primary-color;
+	color: $white;
+}
+
+.tertiary-container {
+	background-color: $secondary-color;
+	color: $white;
+}
+
+.quaternary-container {
+	background-color: $tertiary-color;
+}
+
+.quinary-container {
+	background-color: $quaternary-color;
+}
+
+.senary-container {
+	background-color: $primary-color;
+	color: $white;
+	.hr {
+		background-color: $white;
+		height: 3px;
+		margin: auto;
+		width: 80%;
+	}
+	p {
+		font-size: 1.1em;
+	}
+	img {
+		max-width: 200px;
+	}
+}
+
+.septenary-container {
+	background-color: $secondary-color;
+	color: $white;
+	.contact-links {
+		border: 1px solid $white;
+		border-radius: 3px;
+		color: $white;
+		padding: 15px;
+		.fa {
+			vertical-align: bottom;
+		}
+		&:hover {
+			background-color: $white;
+			color: $secondary-color;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.header-nav {
+		position: relative;
+		.header-nav-links-mobile {
+			max-height: 0;
+			overflow: hidden;
+			position: absolute;
+			right: 15px;
+			transition: all .3s ease;
+			max-width: 200px;
+			z-index: 100;
+			&.active {
+				max-height: 300px;
+				transition: all .5s ease;
+			}
+			.header-nav-links-link.mobile {
+				background-color: $black;
+				color: $white;
+				display: block;
+				padding: 10px 35px;
+				text-align: center;
+				transition: all .2s ease;
+				&:hover {
+					background-color: $primary-color;
+					color: $white;
+				}
+			}
+		}
+	}
+	.primary-content {
+		.hr {
+			margin: auto !important;
+		}
+	}
+}
+
+@media (max-width: 718px) {
+	.btn, .contact-links, [data-toggle="modal"] {
+		display: block;
+		margin: auto;
+		margin-bottom: 15px;
+		width: 90%;
+	}
+	.project-images {
+		.project-images-image {
+			&.mobile {
+				margin-bottom: 30px;
+				margin-right: 0 !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 544px) {
+	.project-images {
+		.project-images-image {
+			&.desktop {
+				max-width: 290px;
+			}
+		}
+	}
+}

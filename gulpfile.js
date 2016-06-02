@@ -7,24 +7,27 @@
   var browserSync = require('browser-sync');
   var reload = browserSync.reload;
   var gutil = require('gulp-util');
-  var notify = require('gulp-notify');
-  var less = require('gulp-less');
   var autoprefix = require('gulp-autoprefixer');
   var minifyCSS = require('gulp-minify-css');
-  var dust = require('gulp-dust');
-  var insert = require('gulp-insert');
+  var cleanCSS = require('gulp-clean-css');
+  var uglify = require('gulp-uglify');
 
-  var lessDir = 'styles';
+  var scssDir = 'styles';
   var targetCSSDir = 'dist/styles';
   var targetJSDir = 'dist/scripts';
 
   gulp.task('styles', function () {
-      return gulp.src(lessDir + '/*.less')
-          .pipe(less({ style: 'compressed' }).on('error', gutil.log))
+      return gulp.src(scssDir + '/*.scss')
+          .pipe($.sass({
+            outputStyle: 'nested', // libsass doesn't support expanded yet
+            precision: 10,
+            includePaths: ['.'],
+            onError: console.error.bind(console, 'Sass error:')
+          }))
           .pipe($.concat('main.css'))
           .pipe($.sourcemaps.write('.'))
+          .pipe(cleanCSS({compatibility: 'ie8'}))
           .pipe(gulp.dest(targetCSSDir))
-          .pipe(notify('CSS minified'))
           .pipe(reload({stream: true}));
   });
 
@@ -34,20 +37,12 @@
       .pipe($.plumber())
       .pipe($.concat('main.js'))
       .pipe($.sourcemaps.write('.'))
+      .pipe(uglify())
       .pipe(gulp.dest('dist/scripts/'))
-      .pipe(notify('JS minified'))
       .pipe(reload({stream: true}));
   });
 
-  gulp.task('templates', function() {
-    return gulp.src('templates/*.dust')
-      .pipe(dust())
-      .pipe($.concat('templates.js'))
-      .pipe(gulp.dest('dist/scripts/'))
-      .pipe(reload({stream: true}));
-  })
-
-  gulp.task('build', ['scripts', 'styles', 'templates'], function(){});
+  gulp.task('build', ['scripts', 'styles'], function(){});
 
   gulp.task('serve', ['build'], function () {
     browserSync({
@@ -62,12 +57,10 @@
     gulp.watch([
       '*.html',
       'scripts/**/*.js',
-      'templates/*.dust',
-      'styles/*.less'
+      'styles/*.scss'
     ]).on('change', reload);
 
-    gulp.watch('styles/*.less', ['styles']);
-    gulp.watch('templates/*.dust', ['templates']);
+    gulp.watch('styles/*.scss', ['styles']);
     gulp.watch('scripts/**/*.js', ['scripts']);
   });
 
