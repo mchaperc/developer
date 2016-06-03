@@ -124,7 +124,6 @@ h6 {
 .quinary-container, 
 .senary-container,
 .septenary-container {
-	// margin-top: -8px;
 	overflow: hidden;
 }
 
@@ -171,6 +170,7 @@ h6 {
 		border-radius: 3px;
 		color: $white;
 		padding: 15px;
+		transition: all .3s ease;
 		.fa {
 			vertical-align: bottom;
 		}
