@@ -26,7 +26,7 @@ $(document).on('ready', function() {
 	$(function () {
 	    // Get the context of the canvas element we want to select
 	    var data = {
-		    labels: ["JavaScript/ES6", "NodeJS/Express", "Backbone/Marionette", "ReactJS", "CSS3", "CSS pre-processor", "HTML5", "Design"],
+		    labels: ["JavaScript/ES6", "NodeJS/Express", "Backbone/Marionette", "ReactJS/Redux", "CSS3", "CSS pre-processor", "HTML5", "Design"],
 		    datasets: [
 		        {
 		            fillColor: "rgba(151,187,205,0.2)",
@@ -35,7 +35,7 @@ $(document).on('ready', function() {
 		            pointStrokeColor: "#fff",
 		            pointHighlightFill: "#fff",
 		            pointHighlightStroke: "rgba(151,187,205,1)",
-		            data: [75, 40, 70, 45, 50, 55, 60, 25]
+		            data: [85, 50, 85, 70, 70, 75, 80, 55]
 		        }
 		    ]
 		};
