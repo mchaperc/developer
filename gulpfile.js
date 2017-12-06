@@ -37,7 +37,7 @@
       .pipe($.plumber())
       .pipe($.concat('main.js'))
       .pipe($.sourcemaps.write('.'))
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(gulp.dest('dist/scripts/'))
       .pipe(reload({stream: true}));
   });
