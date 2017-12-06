@@ -4,7 +4,6 @@ $(document).on('ready', function() {
 		$('.header-nav-links-mobile').toggleClass('active');
 	});
 	$(document).on('click touchstart', '.header-nav-links-link', function(e) {
-		console.log( e.target.id );
 		e.preventDefault();
 		switch (e.target.id) {
 			case 'work':
